@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Form</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <form onsubmit="sendMail(); reset(); return false;">
+                <h3>Get In Touch</h3>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Full Name..."
+                    required
+                />
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email..."
+                    required
+                />
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Phone Number..."
+                    required
+                />
+                <textarea
+                    name=""
+                    id="message"
+                    cols="30"
+                    placeholder="How can we help?"
+                    rows="10"
+                ></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <script>
+            function sendMail() {
+                Email.send({
+                    SecureToken: "4028d877-22d2-48b7-83a2-36e485b8d3c3",
+                    To: "elviskemoi001@gmail.com",
+                    From: "elviskemoi001@gmail.com",
+                    Subject: "This is the subject",
+                    Body: "And this is the body",
+                }).then((message) => alert(message));
+            }
+        </script>
+        <!-- <script>
+            function sendMail() {
+                Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "elviskemoi001@gmail.com",
+                    Password: "DF4307648F0863D1D81C8884AA38C3F5F41",
+                    To: "elviskemoi001@gmail.com",
+                    From: document.getElementById("email").value,
+                    Subject: "This is the subject",
+                    Body: "And This is the body",
+                }).then((message) => alert(message));
+            }
+        </script> -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </body>
+</html>
 
