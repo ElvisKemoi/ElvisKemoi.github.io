@@ -44,7 +44,7 @@
                 Email.send({
                     SecureToken: "4028d877-22d2-48b7-83a2-36e485b8d3c3",
                     To: "elviskemoi001@gmail.com",
-                    From: "elviskemoi001@gmail.com",
+                    From: document.getElementById("email").value,
                     Subject: "This is the subject",
                     Body: "And this is the body",
                 }).then((message) => alert(message));
