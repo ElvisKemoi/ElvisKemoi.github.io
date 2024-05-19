@@ -44,25 +44,13 @@
                 Email.send({
                     SecureToken: "4028d877-22d2-48b7-83a2-36e485b8d3c3",
                     To: "elviskemoi001@gmail.com",
-                    From: document.getElementById("email").value,
+                    From: "elviskemoi001@gmail.com",
                     Subject: "This is the subject",
                     Body: "And this is the body",
                 }).then((message) => alert(message));
             }
         </script>
-        <!-- <script>
-            function sendMail() {
-                Email.send({
-                    Host: "smtp.elasticemail.com",
-                    Username: "elviskemoi001@gmail.com",
-                    Password: "DF4307648F0863D1D81C8884AA38C3F5F41",
-                    To: "elviskemoi001@gmail.com",
-                    From: document.getElementById("email").value,
-                    Subject: "This is the subject",
-                    Body: "And This is the body",
-                }).then((message) => alert(message));
-            }
-        </script> -->
+      
         <script src="https://smtpjs.com/v3/smtp.js"></script>
     </body>
 </html>
